@@ -150,7 +150,14 @@ $currentPage;
 if (array_key_exists("voteList",$safeArray))
 {
 	$votelist = $safeArray["voteList"];
-	$currentPage = $safeArray["pageanchor"];
+	if(array_key_exists("pageanchor",$safeArray))
+	{
+		$currentPage = $safeArray["pageanchor"];
+	}
+	else
+	{
+		$currentPage = 0;
+	}
 	$dss = count($votelist)-1;
 }
 else
@@ -307,7 +314,7 @@ if ($inDayPhase == TRUE)
 $handledPost = 0;
 $bb = "";
 
-if (count($votelist[$dss]>0))
+if (count($votelist[$dss]==0))
 {
 	$lastupdate = "End of Day ".($dss);
 }
