@@ -1,5 +1,5 @@
 # gafia-tool
-Vote counting tool for the Mafia community on the online forum NeoGAF.
+Vote counting tool for the Mafia community on the online forum NeoGAF (we now moved on to ResetERA).
 
 Crawls a specified thread from the forum and searches for relevant voting keywords. The current votecount is written into a HTML file. Also includes a copy-paste-able version for posting on NeoGAF.
 
